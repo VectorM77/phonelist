@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Attitude Adjustment Phone List</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Lato:wght@400;700&display=swap');
+@page {
+  size: letter;
+  margin: 0;
+}
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .page {
+    page-break-after: always;
+    break-after: page;
+  }
+  .page:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+}
+body {
+  font-family: "Lato", Arial, sans-serif;
+  margin: 0;
+  background: white;
+  color: #111;
+}
+.page {
+  box-sizing: border-box;
+  width: 8.5in;
+  height: 11in;
+  padding: 0.36in 0.45in 0.30in 0.45in;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  overflow: hidden;
+}
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("https://raw.githubusercontent.com/VectorM77/phonelist/main/Palm_fronds(portrait).png") no-repeat center center / cover;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+}
+.page > * {
+  position: relative;
+  z-index: 1;
+}
+h1, h2, p {
+  text-align: center;
+  margin: 0;
+}
+h1 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 32px;
+  letter-spacing: 0px;
+  color: #1a3d28;
+  font-weight: 800;
+  text-transform: none;
+  white-space: nowrap;
+}
+h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 26px;
+  letter-spacing: 0px;
+  margin-bottom: 2px;
+  color: #b5651d;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: none;
+}
+p {
+  color: #244833;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fffdf7;
+  box-shadow: 0 0 0 2px #264734;
+}
+th, td {
+  border: 1px solid #8f7a54;
+  padding: 7px 8px;
+  font-size: 15.5px;
+  line-height: 1.15;
+}
+th {
+  background: #264734;
+  color: #fff7e8;
+  font-weight: 800;
+  letter-spacing: .3px;
+}
+tr:nth-child(even) td {
+  background: #f8f0df;
+}
+.name {
+  font-weight: bold;
+}
+td:nth-child(2),
+td:nth-child(3) {
+  text-align: center;
+}
+.update td {
+  height: 58px;
+  background: #fffdf7;
+}
+.update tr:nth-child(even) td {
+  background: #f8f0df;
+}
+.footer {
+  margin-top: auto;
+  padding-top: 8px;
+  font-size: 10.5px;
+  line-height: 1.2;
+  color: #244833;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 18px;
+  align-items: end;
+  white-space: nowrap;
+}
+.footer-note {
+  text-align: left;
+  font-weight: 700;
+}
+.footer-updated {
+  text-align: center;
+}
+.page-number {
+  text-align: right;
+  color: #a56f2a;
+  font-weight: 700;
+}
+
+.brand-row {
+  display: grid;
+  grid-template-columns: 1.7in 1fr 1.85in;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+.brand-box {
+  height: 1.65in;
+  border: 2px solid #264734;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  line-height: 1.1;
+  text-align: center;
+  color: #244833;
+  font-weight: 700;
+  background: #fffdf7;
+}
+.title-block {
+  text-align: center;
+}
+.tagline {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #244833;
+  margin-top: -4px;
+  margin-bottom: 2px;
+  text-align: center;
+}
+.clean-title {
+  margin-bottom: 8px;
+}
+
+.brand-box {
+  padding: 4px;
+  box-sizing: border-box;
+}
+.brand-box img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+.qr-box {
+  flex-direction: column;
+  height: auto;
+  padding: 6px;
+}
+.qr-box img {
+  width: 1.2in;
+  height: 1.2in;
+  display: block;
+}
+.logo-box img {
+  width: 1.6in;
+  height: 1.6in;
+}
+
+.logo-box {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+.logo-box img {
+  width: 1.6in;
+  height: 1.6in;
+  object-fit: contain;
+}
+
+.qr-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #1a3d28;
+  text-align: center;
+  margin-top: 4px;
+  line-height: 1.2;
+}
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 4px 0 4px 0;
+}
+.divider-line {
+  flex: 1;
+  height: 2px;
+  background: #b5651d;
+  border-radius: 1px;
+}
+.divider-diamond {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border: 2px solid #b5651d;
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+.notice-block {
+  text-align: center;
+  margin-bottom: 4px;
+}
+.notice-bold {
+  font-size: 13px;
+  font-weight: 800;
+  color: #1a3d28;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+.notice-sub {
+  font-size: 11.5px;
+  color: #333;
+  font-weight: 400;
+}
+</style>
+</head><body>
+<div class="page"><div class="brand-row"><div class="brand-box logo-box"><img alt="The Arrid Club logo" src="https://raw.githubusercontent.com/VectorM77/phonelist/main/Arrid_Club_Logo.png"/></div><div class="title-block"><h1>Attitude Adjustment</h1><h2>Member Phone List</h2><div class="tagline">Serving the San Jacinto Valley Recovery Community Since 1973</div></div><div class="brand-box qr-box"><img alt="QR code for arridclub.com" style="display:block;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASIAAAEiCAIAAADS3EjhAAAE6klEQVR4nO3dQW4bMRAAwWyg/3/Z+QGRgGkMuaq6ry1ZavDgwfD5+fn5BZR+T78AeD+ZQU5mkJMZ5GQGOZlBTmaQkxnkZAY5mUFOZpCTGeRkBjmZQU5mkJMZ5GQGOZlBTmaQ++w8/DzP/3odh1hvRlm/X8/+/bM32tma4zSDnMwgJzPIyQxyMoOczCAnM8jJDHIyg9zWFMjamXfN7EwnnDn30P3e7hN833djzWkGOZlBTmaQkxnkZAY5mUFOZpCTGeRkBrlwCmTtxtmFqQmSqemTnVfV/d4dU9MnTjPIyQxyMoOczCAnM8jJDHIyg5zMICczyI1NgdzozA0WnW97vx2nGeRkBjmZQU5mkJMZ5GQGOZlBTmaQkxnkTIEcwbzFuznNICczyMkMcjKDnMwgJzPIyQxyMoOczCA3NgVy49xDd1PJ2s7faufZqRthbvxurDnNICczyMkMcjKDnMwgJzPIyQxyMoOczCAXToFMzUxMWc8u7ExUTD3b+bbvhtMMcjKDnMwgJzPIyQxyMoOczCAnM8jJDHJbUyDv29mwNrWT40bf9n7XnGaQkxnkZAY5mUFOZpCTGeRkBjmZQU5mkNuaArlxR8XOFoqddzTlxk9h6hab7lU5zSAnM8jJDHIyg5zMICczyMkMcjKDnMwg98JdIFMTBjt2phNufL87ujmPjtMMcjKDnMwgJzPIyQxyMoOczCAnM8jJDHJju0CmJkimtl+sdRtKztTNapw5I+I0g5zMICczyMkMcjKDnMwgJzPIyQxyMoPcc+auiPdNY0zNeUzdkHLmnS9TnGaQkxnkZAY5mUFOZpCTGeRkBjmZQU5mkAunQKamIm78yWtTcw9nfr6d7u/sNIOczCAnM8jJDHIyg5zMICczyMkMcjKD3NYUyPt0203Wbpxr6UzNtayZAoGjyQxyMoOczCAnM8jJDHIyg5zMICczyH12Hp66EebMWY21M+ct1s7c9nHjTIzTDHIyg5zMICczyMkMcjKDnMwgJzPIyQxyY7tApv6X3z27duPEzJnvd+3M3TZOM8jJDHIyg5zMICczyMkMcjKDnMwgJzPIbU2BTE0Y7HjfdMKNW0Z2dN/Y7jNymkFOZpCTGeRkBjmZQU5mkJMZ5GQGOZlBbmwXyI1u3DJy5k/+tt/rNIOczCAnM8jJDHIyg5zMICczyMkMcjKD3Gfn4fdtoZjajLIzf3DmHM/UJMeZnGaQkxnkZAY5mUFOZpCTGeRkBjmZQU5mkNuaAlk78z/93S02N26w6OZ4bvz03QgDF5MZ5GQGOZlBTmaQkxnkZAY5mUFOZpALp0DWvm3+YO3GrSo3vuapOR6nGeRkBjmZQU5mkJMZ5GQGOZlBTmaQkxnkxqZA3qebMOimE7obcM68W2fNLhC4mMwgJzPIyQxyMoOczCAnM8jJDHIyg5wpkH8wdZ/I2tQdNzu6OY+dd2QXCFxMZpCTGeRkBjmZQU5mkJMZ5GQGOZlBbmwK5MZ7W7qtGzdOcpz5e7tndzjNICczyMkMcjKDnMwgJzPIyQxyMoOczCAXToF0cwBTbryZ5Uw33kRjFwgcTWaQkxnkZAY5mUFOZpCTGeRkBjmZQe65cScH3MVpBjmZQU5mkJMZ5GQGOZlBTmaQkxnkZAY5mUFOZpCTGeRkBjmZQU5mkJMZ5GQGOZlBTmaQ+wOLm5RFKjCVjAAAAABJRU5ErkJggg=="/><div class="qr-label">Scan to view or<br>request changes</div></div></div><div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+<div class="notice-block"><div class="notice-bold">Please do not remove this copy</div><div class="notice-sub">Write any additions or corrections on the updates page at the back.</div></div><table><tr><th>Name</th><th>Phone Number</th><th>Sober Since</th></tr><tr><td class="name">Adam C.</td><td>(951) 292-8882</td><td>2015</td></tr><tr><td class="name">Alfredo T.</td><td>(951) 204-5805</td><td>2011</td></tr><tr><td class="name">Audrey MP.</td><td>(310) 246-1904</td><td>1998</td></tr><tr><td class="name">Bob S.</td><td>(951) 349-9908</td><td>2000</td></tr><tr><td class="name">Carlos H.</td><td>(951) 272-6773</td><td>2024</td></tr><tr><td class="name">Cheryl B.</td><td>(951) 604-8093</td><td>2023</td></tr><tr><td class="name">Chris</td><td>(951) 219-6748</td><td>2025</td></tr><tr><td class="name">Christian G.</td><td>(909) 272-3478</td><td>2024</td></tr><tr><td class="name">Chuckles (Steve)</td><td>(951) 269-8576</td><td></td></tr><tr><td class="name">Craig S.</td><td>(951) 219-6788</td><td>2021</td></tr><tr><td class="name">Cyndi B.</td><td>(951) 590-1402</td><td>1995</td></tr><tr><td class="name">Don B.</td><td>(951) 240-6161</td><td>1984</td></tr><tr><td class="name">Donna J.</td><td>(951) 410-7043</td><td>2010</td></tr><tr><td class="name">Ernie B.</td><td>(951) 213-9503</td><td>1979</td></tr><tr><td class="name">Gary R.</td><td>(951) 330-6764</td><td>2017</td></tr><tr><td class="name">Gregory M.</td><td>(209) 602-1122</td><td>2012</td></tr><tr><td class="name">Hippie J.</td><td>(951) 210-9531</td><td>2019</td></tr><tr><td class="name">Isaac G.</td><td>(951) 956-3931</td><td>2014</td></tr><tr><td class="name">Israel N.</td><td>(951) 663-8180</td><td>2024</td></tr><tr><td class="name">Jason A.</td><td>(951) 492-5808</td><td></td></tr><tr><td class="name">Jeffery S.</td><td>(951) 259-8476</td><td>2023</td></tr><tr><td class="name">John M.</td><td>(541) 783-3779</td><td>1979</td></tr></table><div class="footer"><div class="footer-note">For AA members only. Please keep information confidential.</div><div class="footer-updated">Last Updated: June 11, 2026</div><div class="page-number">Page 1 of 4</div></div></div><div class="page"><h1>Attitude Adjustment</h1><h2 class="clean-title">Member Phone List</h2><div class="tagline">Serving the San Jacinto Valley Recovery Community Since 1973</div><div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+<div class="notice-block"><div class="notice-bold">Please do not remove this copy</div><div class="notice-sub">Write any additions or corrections on the updates page at the back.</div></div><table><tr><th>Name</th><th>Phone Number</th><th>Sober Since</th></tr><tr><td class="name">Jonathan D.</td><td>(951) 275-3887</td><td></td></tr><tr><td class="name">Jose O.</td><td>(909) 549-0717</td><td>2024</td></tr><tr><td class="name">Kimberly L.</td><td>(951) 306-7785</td><td>1993</td></tr><tr><td class="name">Kirk B.</td><td>(951) 513-6239</td><td>2023</td></tr><tr><td class="name">Lisa S.</td><td>(909) 684-6984</td><td>2014</td></tr><tr><td class="name">Michael C.</td><td>(951) 483-7971</td><td>2025</td></tr><tr><td class="name">Michelle L.</td><td>(951) 480-1469</td><td>2023</td></tr><tr><td class="name">Mike B.</td><td>(513) 253-8631</td><td>2026</td></tr><tr><td class="name">Nino</td><td>(213) 446-8321</td><td>1984</td></tr><tr><td class="name">Pete J.</td><td>(951) 923-9362</td><td>2024</td></tr><tr><td class="name">Peter H.</td><td>(951) 306-5284</td><td>2020</td></tr><tr><td class="name">Phillip J.</td><td>(951) 337-5327</td><td>2024</td></tr><tr><td class="name">Quas S.</td><td>(657) 808-9337</td><td>2024</td></tr><tr><td class="name">Reese W.</td><td>(909) 615-6593</td><td>2024</td></tr><tr><td class="name">Reggie</td><td>(323) 675-9141</td><td></td></tr><tr><td class="name">Richard J.</td><td>(951) 902-0072</td><td>2021</td></tr><tr><td class="name">Robert F.</td><td>(951) 209-9701</td><td>2023</td></tr><tr><td class="name">Ruben O.</td><td>(909) 831-7731</td><td>2014</td></tr><tr><td class="name">Ruben V.</td><td>(951) 282-1933</td><td>1933</td></tr><tr><td class="name">Ryan L.</td><td>(951) 663-1601</td><td></td></tr><tr><td class="name">Sam C.</td><td>(951) 440-8808</td><td></td></tr><tr><td class="name">Scott J.</td><td>(909) 520-8288</td><td>2013</td></tr></table><div class="footer"><div class="footer-note">For AA members only. Please keep information confidential.</div><div class="footer-updated">Last Updated: June 11, 2026</div><div class="page-number">Page 2 of 4</div></div></div><div class="page"><h1>Attitude Adjustment</h1><h2 class="clean-title">Member Phone List</h2><div class="tagline">Serving the San Jacinto Valley Recovery Community Since 1973</div><div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+<div class="notice-block"><div class="notice-bold">Please do not remove this copy</div><div class="notice-sub">Write any additions or corrections on the updates page at the back.</div></div><table><tr><th>Name</th><th>Phone Number</th><th>Sober Since</th></tr><tr><td class="name">Sean R.</td><td>(951) 923-6166</td><td>2014</td></tr><tr><td class="name">Sheryl B.</td><td>(951) 757-7111</td><td>2023</td></tr><tr><td class="name">Stephan F.</td><td>(951) 851-8845</td><td>2023</td></tr><tr><td class="name">Steve M.</td><td>(951) 269-8576</td><td></td></tr><tr><td class="name">Steve Z.</td><td>(951) 229-6554</td><td></td></tr><tr><td class="name">Tammy S.</td><td>(909) 499-8301</td><td>2020</td></tr><tr><td class="name">Taylor P.</td><td>(951) 370-3516</td><td>2023</td></tr><tr><td class="name">Theresa L.</td><td>(951) 230-4206</td><td>2015</td></tr><tr><td class="name">Tim A.</td><td>(951) 513-9945</td><td>2015</td></tr><tr><td class="name">Tim H.</td><td>(951) 663-2831</td><td>2012</td></tr><tr><td class="name">Todd R.</td><td>(951) 496-6859</td><td>2023</td></tr><tr><td class="name">Tom D.</td><td>(909) 374-1453</td><td></td></tr><tr><td class="name">Tommy W.</td><td>(951) 380-4141</td><td>2024</td></tr><tr><td class="name">Tony V.</td><td>(909) 754-4148</td><td>2022</td></tr><tr><td class="name">Tyler B.</td><td>(619) 629-7637</td><td>2023</td></tr><tr><td class="name">Victor R.</td><td>(951) 445-2384</td><td></td></tr><tr><td class="name">Wendy C.</td><td>(951) 385-9933</td><td>2021</td></tr><tr><td class="name">Willie H.</td><td>(951) 892-2876</td><td>2014</td></tr><tr><td class="name">Wolfie S.</td><td>(951) 442-5435</td><td>2025</td></tr></table><div class="footer"><div class="footer-note">For AA members only. Please keep information confidential.</div><div class="footer-updated">Last Updated: June 11, 2026</div><div class="page-number">Page 3 of 4</div></div></div>
+<div class="page"><div class="brand-row"><div class="brand-box logo-box"><img alt="The Arrid Club logo" src="https://raw.githubusercontent.com/VectorM77/phonelist/main/Arrid_Club_Logo.png"/></div><div class="title-block"><h1>Attitude Adjustment</h1><h2>UPDATES &amp; CORRECTIONS</h2><div class="tagline">Serving the San Jacinto Valley Recovery Community Since 1973</div></div><div class="brand-box qr-box"><img alt="QR code for arridclub.com" style="display:block;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASIAAAEiCAIAAADS3EjhAAAE6klEQVR4nO3dQW4bMRAAwWyg/3/Z+QGRgGkMuaq6ry1ZavDgwfD5+fn5BZR+T78AeD+ZQU5mkJMZ5GQGOZlBTmaQkxnkZAY5mUFOZpCTGeRkBjmZQU5mkJMZ5GQGOZlBTmaQ++w8/DzP/3odh1hvRlm/X8/+/bM32tma4zSDnMwgJzPIyQxyMoOczCAnM8jJDHIyg9zWFMjamXfN7EwnnDn30P3e7hN833djzWkGOZlBTmaQkxnkZAY5mUFOZpCTGeRkBrlwCmTtxtmFqQmSqemTnVfV/d4dU9MnTjPIyQxyMoOczCAnM8jJDHIyg5zMICczyI1NgdzozA0WnW97vx2nGeRkBjmZQU5mkJMZ5GQGOZlBTmaQkxnkTIEcwbzFuznNICczyMkMcjKDnMwgJzPIyQxyMoOczCA3NgVy49xDd1PJ2s7faufZqRthbvxurDnNICczyMkMcjKDnMwgJzPIyQxyMoOczCAXToFMzUxMWc8u7ExUTD3b+bbvhtMMcjKDnMwgJzPIyQxyMoOczCAnM8jJDHJbUyDv29mwNrWT40bf9n7XnGaQkxnkZAY5mUFOZpCTGeRkBjmZQU5mkNuaArlxR8XOFoqddzTlxk9h6hab7lU5zSAnM8jJDHIyg5zMICczyMkMcjKDnMwg98JdIFMTBjt2phNufL87ujmPjtMMcjKDnMwgJzPIyQxyMoOczCAnM8jJDHJju0CmJkimtl+sdRtKztTNapw5I+I0g5zMICczyMkMcjKDnMwgJzPIyQxyMoPcc+auiPdNY0zNeUzdkHLmnS9TnGaQkxnkZAY5mUFOZpCTGeRkBjmZQU5mkAunQKamIm78yWtTcw9nfr6d7u/sNIOczCAnM8jJDHIyg5zMICczyMkMcjKD3NYUyPt0203Wbpxr6UzNtayZAoGjyQxyMoOczCAnM8jJDHIyg5zMICczyH12Hp66EebMWY21M+ct1s7c9nHjTIzTDHIyg5zMICczyMkMcjKDnMwgJzPIyQxyY7tApv6X3z27duPEzJnvd+3M3TZOM8jJDHIyg5zMICczyMkMcjKDnMwgJzPIbU2BTE0Y7HjfdMKNW0Z2dN/Y7jNymkFOZpCTGeRkBjmZQU5mkJMZ5GQGOZlBbmwXyI1u3DJy5k/+tt/rNIOczCAnM8jJDHIyg5zMICczyMkMcjKD3Gfn4fdtoZjajLIzf3DmHM/UJMeZnGaQkxnkZAY5mUFOZpCTGeRkBjmZQU5mkNuaAlk78z/93S02N26w6OZ4bvz03QgDF5MZ5GQGOZlBTmaQkxnkZAY5mUFOZpALp0DWvm3+YO3GrSo3vuapOR6nGeRkBjmZQU5mkJMZ5GQGOZlBTmaQkxnkxqZA3qebMOimE7obcM68W2fNLhC4mMwgJzPIyQxyMoOczCAnM8jJDHIyg5wpkH8wdZ/I2tQdNzu6OY+dd2QXCFxMZpCTGeRkBjmZQU5mkJMZ5GQGOZlBbmwK5MZ7W7qtGzdOcpz5e7tndzjNICczyMkMcjKDnMwgJzPIyQxyMoOczCAXToF0cwBTbryZ5Uw33kRjFwgcTWaQkxnkZAY5mUFOZpCTGeRkBjmZQe65cScH3MVpBjmZQU5mkJMZ5GQGOZlBTmaQkxnkZAY5mUFOZpCTGeRkBjmZQU5mkJMZ5GQGOZlBTmaQ+wOLm5RFKjCVjAAAAABJRU5ErkJggg=="/><div class="qr-label">Scan to view or<br>request changes</div></div></div>
+<div class="divider"><div class="divider-line"></div><div class="divider-diamond"></div><div class="divider-line"></div></div>
+<div class="notice-block"><div class="notice-bold">Please do not remove this copy</div><div class="notice-sub">Write any additions or corrections on the updates page at the back.</div></div>
+<p style="margin-bottom:12px;">Amendments requested via hard copy will be applied to the main list at the end of each month</p>
+<table class="update"><tr><th>Name</th><th>Phone Number</th><th>Sober Since</th><th>Notes</th></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr></table><div class="footer"><div class="footer-note">For AA members only. Please keep information confidential.</div><div class="footer-updated">Last Updated: June 11, 2026</div><div class="page-number">Page 4 of 4</div></div></div></body></html>
